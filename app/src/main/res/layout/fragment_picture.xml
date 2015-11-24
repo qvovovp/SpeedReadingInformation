@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+        <com.kaskys.speedreadinginformation.app.ui.widget.tablayout.ITabLayout
+                android:id="@+id/tl_top"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/theme_primary"
+                app:stl_indicatorColor="@color/theme_accent"
+                app:stl_indicatorThickness="3dp"
+                app:stl_indicatorCornerRadius="2dp"
+                app:stl_dividerColor="@android:color/transparent"
+                app:stl_dividerThickness="0dp"
+                app:stl_underlineColor="@android:color/transparent"
+                app:stl_defaultTabTextColor="@android:color/white"
+                app:stl_defaultTabTextSize="20sp"
+                app:stl_defaultTabTextHorizontalPadding="20dp"/>
+        <android.support.v4.view.ViewPager
+                android:id="@+id/picture_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tl_top"/>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">快讯</string>
+    <string name="hello_world">您好!</string>
+
+    <string name="robot">图灵机器人</string>
+    <string name="size">文字大小</string>
+    <string name="share">分享</string>
+
+    <string name="common_no_network_msg">没有网络连接...</string>
+    <string name="common_empty_msg">加载数据错误...</string>
+    <string name="common_error_msg">数据错误...</string>
+    <string name="common_loading_message">加载中...</string>
+</resources>

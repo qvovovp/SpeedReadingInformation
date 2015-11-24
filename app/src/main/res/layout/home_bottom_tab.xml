@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rg_group"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bottom_tag_bg"
+        android:orientation="horizontal">
+    <RadioButton
+            android:id="@+id/rb_news"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="15dp"
+            style="@style/BottomTabStyle"
+            android:background="@drawable/btn_tab_news_selector"/>
+    <RadioButton
+            android:id="@+id/rb_picture"
+            style="@style/BottomTabStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_tab_picture_selector"/>
+    <RadioButton
+            android:id="@+id/rb_music"
+            style="@style/BottomTabStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_tab_music_selector"/>
+    <RadioButton
+            android:id="@+id/rb_read"
+            style="@style/BottomTabStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_tab_read_selector"/>
+</RadioGroup>

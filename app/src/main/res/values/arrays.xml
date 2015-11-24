@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="news_channe_list_name">
+        <item>Inland</item>
+        <item>Society</item>
+        <item>Taiwan</item>
+        <item>HK and MACAO</item>
+        <item>International</item>
+        <item>Military</item>
+        <item>Recreation</item>
+        <item>Technology</item>
+        <item>MumericalCode</item>
+        <item>Computer</item>
+        <item>Popularization</item>
+        <item>FinanceAndEconomics</item>
+        <item>ManageMoneyMatters</item>
+        <item>MacroEconomy</item>
+        <item>Internet</item>
+        <item>HouseProperty</item>
+        <item>Car</item>
+        <item>PhysicalEducation</item>
+        <item>InternationalFootball</item>
+        <item>InlandFootball</item>
+        <item>CBA</item>
+        <item>SynthesizePhysicalEducation</item>
+        <item>Film</item>
+        <item>Tv</item>
+        <item>Game</item>
+        <item>Education</item>
+        <item>Woman</item>
+        <item>Skincare</item>
+        <item>EmtionBisexual</item>
+        <item>Medicl</item>
+    </array>
+
+    <array name="news_channe_list_id">
+        <item>5572a109b3cdc86cf39001db</item>
+        <item>5572a10bb3cdc86cf39001f8</item>
+        <item>5572a109b3cdc86cf39001dc</item>
+        <item>5572a109b3cdc86cf39001dd</item>
+        <item>5572a109b3cdc86cf39001de</item>
+        <item>5572a109b3cdc86cf39001df</item>
+        <item>5572a10ab3cdc86cf39001eb</item>
+        <item>5572a10ab3cdc86cf39001f4</item>
+        <item>5572a10bb3cdc86cf39001f5</item>
+        <item>5572a10bb3cdc86cf39001f6</item>
+        <item>5572a10bb3cdc86cf39001f7</item>
+        <item>5572a109b3cdc86cf39001e0</item>
+        <item>5572a109b3cdc86cf39001e1</item>
+        <item>5572a109b3cdc86cf39001e2</item>
+        <item>5572a109b3cdc86cf39001e3</item>
+        <item>5572a109b3cdc86cf39001e4</item>
+        <item>5572a109b3cdc86cf39001e5</item>
+        <item>5572a109b3cdc86cf39001e6</item>
+        <item>5572a10ab3cdc86cf39001e7</item>
+        <item>5572a10ab3cdc86cf39001e8</item>
+        <item>5572a10ab3cdc86cf39001e9</item>
+        <item>5572a10ab3cdc86cf39001ea</item>
+        <item>5572a10ab3cdc86cf39001ec</item>
+        <item>5572a10ab3cdc86cf39001ed</item>
+        <item>5572a10ab3cdc86cf39001ee</item>
+        <item>5572a10ab3cdc86cf39001ef</item>
+        <item>5572a10ab3cdc86cf39001f0</item>
+        <item>5572a10ab3cdc86cf39001f1</item>
+        <item>5572a10ab3cdc86cf39001f2</item>
+        <item>5572a10ab3cdc86cf39001f3</item>
+    </array>
+    
+    <array name="picture_type_name_list">
+        <item>bigtits</item>
+        <item>partysu</item>
+        <item>fanart</item>
+        <item>sexy</item>
+        <item>longlegs</item>
+        <item>stockings</item>
+        <item>smallfart</item>
+    </array>
+
+    <array name="picture_type_id_list">
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+    </array>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="news_channe_list_name">
+        <item>国内</item>
+        <item>社会</item>
+        <item>台湾</item>
+        <item>港澳</item>
+        <item>国际</item>
+        <item>军事</item>
+        <item>娱乐</item>
+        <item>科技</item>
+        <item>数码</item>
+        <item>电脑</item>
+        <item>科普</item>
+        <item>财经</item>
+        <item>理财</item>
+        <item>宏观经济</item>
+        <item>互联网</item>
+        <item>房产</item>
+        <item>汽车</item>
+        <item>体育</item>
+        <item>国际足球</item>
+        <item>国内足球</item>
+        <item>CBA</item>
+        <item>综合体育</item>
+        <item>电影</item>
+        <item>电视</item>
+        <item>游戏</item>
+        <item>教育</item>
+        <item>女人</item>
+        <item>美容护肤</item>
+        <item>感情两性</item>
+        <item>健康养生</item>
+    </array>
+
+    <array name="news_channe_list_id">
+        <item>5572a109b3cdc86cf39001db</item>
+        <item>5572a10bb3cdc86cf39001f8</item>
+        <item>5572a109b3cdc86cf39001dc</item>
+        <item>5572a109b3cdc86cf39001dd</item>
+        <item>5572a109b3cdc86cf39001de</item>
+        <item>5572a109b3cdc86cf39001df</item>
+        <item>5572a10ab3cdc86cf39001eb</item>
+        <item>5572a10ab3cdc86cf39001f4</item>
+        <item>5572a10bb3cdc86cf39001f5</item>
+        <item>5572a10bb3cdc86cf39001f6</item>
+        <item>5572a10bb3cdc86cf39001f7</item>
+        <item>5572a109b3cdc86cf39001e0</item>
+        <item>5572a109b3cdc86cf39001e1</item>
+        <item>5572a109b3cdc86cf39001e2</item>
+        <item>5572a109b3cdc86cf39001e3</item>
+        <item>5572a109b3cdc86cf39001e4</item>
+        <item>5572a109b3cdc86cf39001e5</item>
+        <item>5572a109b3cdc86cf39001e6</item>
+        <item>5572a10ab3cdc86cf39001e7</item>
+        <item>5572a10ab3cdc86cf39001e8</item>
+        <item>5572a10ab3cdc86cf39001e9</item>
+        <item>5572a10ab3cdc86cf39001ea</item>
+        <item>5572a10ab3cdc86cf39001ec</item>
+        <item>5572a10ab3cdc86cf39001ed</item>
+        <item>5572a10ab3cdc86cf39001ee</item>
+        <item>5572a10ab3cdc86cf39001ef</item>
+        <item>5572a10ab3cdc86cf39001f0</item>
+        <item>5572a10ab3cdc86cf39001f1</item>
+        <item>5572a10ab3cdc86cf39001f2</item>
+        <item>5572a10ab3cdc86cf39001f3</item>
+    </array>
+
+    <array name="picture_type_name_list">
+        <item>大胸妹</item>
+        <item>小清新</item>
+        <item>文艺范</item>
+        <item>性感妹</item>
+        <item>大长腿</item>
+        <item>黑丝袜</item>
+        <item>小翘屁</item>
+    </array>
+
+    <array name="picture_type_id_list">
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+    </array>
+</resources>

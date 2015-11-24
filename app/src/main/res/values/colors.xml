@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_primary">#FF0098FF</color>
+    <color name="theme_primary_dark">#f00f88FF</color>
+    <color name="theme_text_primary">#FFFFFFFF</color>
+    <color name="theme_accent">#FF58FF25</color>
+    <color name="background_window">#fff5f5f5</color>
+
+    <color name="default_image_background">#FFDEDEDE</color>
+
+    <integer-array name="gplus_colors">
+        <item>@color/gplus_color_1</item>
+        <item>@color/gplus_color_2</item>
+        <item>@color/gplus_color_3</item>
+        <item>@color/gplus_color_4</item>
+    </integer-array>
+
+    <color name="base_bg">#ffeeeeee</color>
+    <color name="base_msg_color">#ff999999</color>
+    <color name="gplus_color_1">#3e802f</color>
+    <color name="gplus_color_2">#f4b400</color>
+    <color name="gplus_color_3">#427fed</color>
+    <color name="gplus_color_4">#b23424</color>
+
+    <color name="bottom_tag_content_view">#FFEAEAEA</color>
+    <color name="bottom_tag_bg">#FFEFEFEA</color>
+
+    <color name="news_text_title">#FF000000</color>
+    <color name="news_text_desc">#FFAAAAAA</color>
+    <color name="news_text_source">#FFBFBFBF</color>
+    <color name="news_text_time">#FFFF4E2A</color>
+</resources>
