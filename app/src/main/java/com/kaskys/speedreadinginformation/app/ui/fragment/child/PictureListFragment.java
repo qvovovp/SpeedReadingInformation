@@ -13,8 +13,10 @@ import com.kaskys.speedreadinginformation.app.ui.activity.HomeActivity;
 import com.kaskys.speedreadinginformation.app.ui.adapter.PictureListAdapter;
 import com.kaskys.speedreadinginformation.app.ui.fragment.base.BaseFragment;
 import com.kaskys.speedreadinginformation.app.ui.view.PictureListView;
+import com.kaskys.speedreadinginformation.app.ui.widget.MyImageView;
 import com.kaskys.speedreadinginformation.app.ui.widget.SingleMenuView;
 import com.kaskys.speedreadinginformation.app.utils.DensityUtils;
+import com.kaskys.speedreadinginformation.app.utils.MyImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.List;
@@ -125,7 +127,9 @@ public class PictureListFragment extends BaseFragment implements PictureListView
         @Override
         public void onItemClick(View view, int position) {
             if(null != mAdapter){
-                ImageLoader.getInstance().displayImage(mAdapter.getPictures().get(position).thumb,mImage);
+//                ImageLoader.getInstance().displayImage(mAdapter.getPictures().get(position).thumb,mImage);
+                MyImageView img = (MyImageView) view.getTag();
+                MyImageLoader.getInstance().display(img.getImageBitmap(),mImage);
                 mSingleMenuView.openMenuView(view);
             }
         }

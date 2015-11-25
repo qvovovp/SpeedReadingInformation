@@ -100,11 +100,11 @@ public class SingleMenuView implements AnimatorListener{
 	 * @param view 点击的view
 	 */
 	public void openMenuView(View view){
-		if(mView != view){
+//		if(mView != view){
 			this.mView = view;
 			mRoot.removeAllViews();
 			compuleResult();
-		}
+//		}
 		
 		if(mMenuViewSmall != null){
 			if(mRoot.getChildCount() <= 0){
@@ -257,7 +257,7 @@ public class SingleMenuView implements AnimatorListener{
 	@Override
 	public void onAnimationEnd(Animator animation) {
 		if(AnimState == MENUVIEW_CLOSE){
-			mRoot.getChildAt(0).setVisibility(View.INVISIBLE);
+			mRoot.getChildAt(0).setVisibility(View.GONE);
 //			mRoot.getChildAt(1).setVisibility(View.INVISIBLE);
 		}else if(AnimState == MENUVIEW_SHOW){
 			mRoot.getChildAt(0).setVisibility(View.VISIBLE);

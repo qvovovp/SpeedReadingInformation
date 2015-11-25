@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 
 public class MyImageView extends ImageView{
 	private Context mContext;
+	private Bitmap mBitmap;
 	private int mImgWidth,mImgHeight;
 	private int mScreenHeight;
 	
@@ -33,8 +34,13 @@ public class MyImageView extends ImageView{
 		mScreenHeight = mContext.getResources().getDisplayMetrics().heightPixels;
 	}
 
+	public Bitmap getImageBitmap(){
+		return mBitmap;
+	}
+
 	@Override
 	public void setImageBitmap(Bitmap bm) {
+		mBitmap = bm;
 		mImgWidth = bm.getWidth();
 		mImgHeight = bm.getHeight();
 		requestLayout();

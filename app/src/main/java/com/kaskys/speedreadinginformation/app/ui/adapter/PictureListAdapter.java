@@ -58,6 +58,7 @@ public class PictureListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         public ViewHolder(View itemView) {
             super(itemView);
             imgContext = (MyImageView) itemView.findViewById(R.id.img_content);
+            itemView.setTag(imgContext);
             itemView.setOnClickListener(this);
         }
 
