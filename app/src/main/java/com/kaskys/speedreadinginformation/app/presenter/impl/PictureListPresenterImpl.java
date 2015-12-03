@@ -43,9 +43,11 @@ public class PictureListPresenterImpl implements DataListPresenter,OnRequestList
 
     @Override
     public void onSuccess(PictureData data) {
-        if(null != data.showapi_res_body){
+        if(null != data.showapi_res_body && data.showapi_res_error.equals("")){
             List<PictureData.Body.Detail> pictures = tidyData(data);
             mPictureListView.setupData(pictures);
+        }else{
+            mPictureListView.setupData(null);
         }
     }
 

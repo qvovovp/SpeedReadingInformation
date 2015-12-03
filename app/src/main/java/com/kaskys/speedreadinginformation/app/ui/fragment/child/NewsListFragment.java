@@ -108,7 +108,6 @@ public class NewsListFragment extends BaseFragment implements NewsListView{
                 mAdapter = new NewsListAdapter(mContext, newsData,this);
                 mRefreshListView.setAdapter(mAdapter);
                 mRefreshListView.setOnScrollListener(mRefreshListView);
-                mRefreshListView.onRefreshComplete();
 
                 if(topNews.size() > 0) {
                     mRefreshListView.addHeaderView(mHeaderView);
@@ -126,8 +125,8 @@ public class NewsListFragment extends BaseFragment implements NewsListView{
                 mTopAdapter.clear();
                 mTopAdapter.addAll(topNews);
                 mTopAdapter.notifyDataSetChanged();
-                mRefreshListView.onRefreshComplete();
             }
+            mRefreshListView.onRefreshComplete();
         }
     }
 

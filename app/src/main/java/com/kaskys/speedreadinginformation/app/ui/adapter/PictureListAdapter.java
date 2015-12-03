@@ -33,6 +33,14 @@ public class PictureListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         mPictures = pictures;
     }
 
+    public void clear(){
+        mPictures.clear();
+    }
+
+    public void addAll(List<Detail> pictures){
+        mPictures.addAll(pictures);
+    }
+
     public List<Detail> getPictures(){
         return mPictures;
     }

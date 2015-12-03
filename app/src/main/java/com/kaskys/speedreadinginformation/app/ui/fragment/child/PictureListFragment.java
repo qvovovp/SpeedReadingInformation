@@ -13,6 +13,7 @@ import com.kaskys.speedreadinginformation.app.ui.activity.HomeActivity;
 import com.kaskys.speedreadinginformation.app.ui.adapter.PictureListAdapter;
 import com.kaskys.speedreadinginformation.app.ui.fragment.base.BaseFragment;
 import com.kaskys.speedreadinginformation.app.ui.view.PictureListView;
+import com.kaskys.speedreadinginformation.app.ui.widget.IRefreshView;
 import com.kaskys.speedreadinginformation.app.ui.widget.MyImageView;
 import com.kaskys.speedreadinginformation.app.ui.widget.SingleMenuView;
 import com.kaskys.speedreadinginformation.app.utils.DensityUtils;
@@ -28,7 +29,7 @@ public class PictureListFragment extends BaseFragment implements PictureListView
     private String mCurrentTypeId = "0";
     private int mCurrentPage = 0;
 
-    private RecyclerView mRecyclerView;
+    private IRefreshView mRecyclerView;
     private PictureListAdapter mAdapter;
 
     private SingleMenuView mSingleMenuView;
@@ -48,8 +49,21 @@ public class PictureListFragment extends BaseFragment implements PictureListView
 
     @Override
     protected void initViewsAndEvents() {
-        mRecyclerView = (RecyclerView) mRootView.findViewById(R.id.picture_item_container);
-        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+        mRecyclerView = (IRefreshView) mRootView.findViewById(R.id.picture_item_container);
+        mRecyclerView.setStaggeredGridLayoutManager(new StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL));
+        mRecyclerView.setOnRefreshListener(new IRefreshView.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                mCurrentPage = 1;
+                mPictureListPresenter.initialized(mCurrentTypeId,mCurrentPage);
+            }
+
+            @Override
+            public void onLoadMore() {
+                mCurrentPage = mCurrentPage + 1;
+                mPictureListPresenter.loadMore(mCurrentTypeId,mCurrentPage);
+            }
+        });
 
         mSingleMenuView = new SingleMenuView(getActivity(),((HomeActivity)getActivity()).getRoot(),((HomeActivity)getActivity()).getFrame());
         mSingleMenuView.setMenuView(R.layout.fragment_picture_list_single, DensityUtils.getDisplayWidth(mContext)/15,
@@ -106,13 +120,24 @@ public class PictureListFragment extends BaseFragment implements PictureListView
                 mAdapter = new PictureListAdapter(mContext,pictures);
                 mAdapter.setOnItemClickListener(new OnClickListener());
                 mRecyclerView.setAdapter(mAdapter);
+            }else if(null != mAdapter){
+                mAdapter.clear();
+                mAdapter.addAll(pictures);
+                mAdapter.notifyDataSetChanged();
             }
+            mRecyclerView.onRefreshComplete();
         }
     }
 
     @Override
     public void onLoadMore(List<PictureData.Body.Detail> pictures) {
-
+        if(null != pictures){
+            mAdapter.addAll(pictures);
+            mAdapter.notifyDataSetChanged();
+        }else{
+            showToast("访问网络错误...");
+        }
+        mRecyclerView.onRefreshComplete();
     }
 
     @Override
