@@ -11,6 +11,7 @@ import com.kaskys.speedreadinginformation.app.R;
 import com.kaskys.speedreadinginformation.app.bean.NewsData.Body.Bean.Detail;
 import com.kaskys.speedreadinginformation.app.ui.view.NewsListView;
 import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
@@ -80,6 +81,7 @@ public class NewsListAdapter extends BaseAdapter{
         holder.tvSource.setText(mNews.get(i).source);
         holder.tvTime.setText(mNews.get(i).pubDate);
         if(null != mNews.get(i).imageurls && mNews.get(i).imageurls.size() > 0) {
+            holder.imgContent.setTag(mNews.get(i).imageurls.get(0).url);
             ImageLoader.getInstance().displayImage(mNews.get(i).imageurls.get(0).url,holder.imgContent,animateFirstListener);
         }
 
@@ -103,12 +105,15 @@ public class NewsListAdapter extends BaseAdapter{
         public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
             if(loadedImage != null){
                 ImageView imageView = (ImageView) view;
-                boolean firstDisplay = !displayedImages.contains(imageUri);
-                if(firstDisplay){
-                    FadeInBitmapDisplayer.animate(imageView, 500);
-                    displayedImages.add(imageUri);
+                if(imageView.getTag().equals(imageUri)) {
+                    boolean firstDisplay = !displayedImages.contains(imageUri);
+                    if (firstDisplay) {
+                        FadeInBitmapDisplayer.animate(imageView, 500);
+                        displayedImages.add(imageUri);
+                    }
                 }
             }
         }
+
     }
 }

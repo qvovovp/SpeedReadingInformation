@@ -15,7 +15,9 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/img_content"
                 android:padding="5dp"
-                android:minLines="2"
+                android:minLines="1"
+                android:maxLines="2"
+                android:ellipsize="end"
                 android:textColor="@color/news_text_title"
                 android:textSize="16sp"/>
         <TextView

@@ -24,10 +24,13 @@
         </activity>
         <activity android:name=".ui.activity.HomeActivity"/>
         <activity android:name=".ui.activity.NewsDetailActivity"/>
+        <activity android:name=".ui.activity.MusicSeachActivity"/>
         <activity android:name=".text.Text3Activity"/>
         <activity android:name=".text.Text2Activity"/>
         <activity android:name=".text.Text1Activity"/>
         <activity android:name=".text.Text4Activity"/>
         <activity android:name=".text.Text5Activity"/>
+
+        <service android:name=".ui.service.MusicService"/>
     </application>
 </manifest>

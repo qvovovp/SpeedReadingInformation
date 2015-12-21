@@ -1,4 +1,11 @@
 <resources>
+    <string name="item_news">新闻</string>
+    <string name="item_picture">图片</string>
+    <string name="item_music">音乐</string>
+    <string name="item_read">阅读</string>
+
+    <string name="music_seach_title_name">排行榜</string>
+
     <string name="app_name">快讯</string>
     <string name="hello_world">您好!</string>
 

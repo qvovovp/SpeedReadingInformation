@@ -56,6 +56,11 @@ public class SplashActivity extends BaseActivity implements SplashView{
     }
 
     @Override
+    protected void onActivityDestroy() {
+
+    }
+
+    @Override
     public void animateBackgroundImage(Animation animation) {
         mAppName.startAnimation(animation);
     }

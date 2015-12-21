@@ -10,9 +10,10 @@ import java.util.Date;
  * Created by 卡你基巴 on 2015/11/9.
  */
 public class UrlManager {
-    private final static String PAGER_NUM = "20";
-    private final static String PAGER_NUM_MIN = "10";
-    private final static String MUSIC_KEY = "482dcc55534d629f559c4dd62f1d6a6e09bf61";
+    private static final String PAGER_lIMIT = "0";
+    private static final String PAGER_NUM = "20";
+    private static final String PAGER_NUM_MIN = "10";
+    private static final String MUSIC_KEY = "482dcc55534d629f559c4dd62f1d6a6e09bf61";
 
     private static UrlManager instance = null;
 
@@ -172,6 +173,15 @@ public class UrlManager {
                 .appendQueryParameter("showapi_sign",APIConstants.Keys.SHOWAPI_APP_KEY)
                 .appendQueryParameter("showapi_timestamp",getTimeStamp())
                 .appendQueryParameter("topid",topId);
+        return builder.build().toString();
+    }
+
+    public String getBaiduMusicTopListUrl(String type){
+        String url = APIConstants.Urls.MUSIC_BAIDU_TOP_URL;
+        Uri.Builder builder = Uri.parse(url).buildUpon()
+                .appendQueryParameter("type",type)
+                .appendQueryParameter("offset",PAGER_lIMIT)
+                .appendQueryParameter("size",PAGER_NUM);
         return builder.build().toString();
     }
 

@@ -85,4 +85,28 @@
         <item>39</item>
         <item>40</item>
     </array>
+
+    <array name="music_top_name_list">
+        <item>New Music</item>
+        <item>Hot Music</item>
+        <item>Rock</item>
+        <item>Jazz</item>
+        <item>Fashion</item>
+        <item>Europe and America</item>
+        <item>Classic Oldies</item>
+        <item>Film and TV Songs</item>
+        <item>Net Music</item>
+    </array>
+
+    <array name="music_top_id_list">
+        <item>1</item>
+        <item>2</item>
+        <item>11</item>
+        <item>12</item>
+        <item>16</item>
+        <item>21</item>
+        <item>22</item>
+        <item>24</item>
+        <item>25</item>
+    </array>
 </resources>

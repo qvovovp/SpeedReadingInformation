@@ -10,17 +10,30 @@ import android.view.Menu;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.kaskys.speedreadinginformation.app.R;
+import com.kaskys.speedreadinginformation.app.ui.widget.ICancelButton;
+import com.kaskys.speedreadinginformation.app.ui.widget.IEditText;
+import com.kaskys.speedreadinginformation.app.ui.widget.IView;
+import com.kaskys.speedreadinginformation.app.ui.widget.IWeatherView;
 import com.kaskys.speedreadinginformation.app.ui.widget.loading.LoadingViewHelperController;
 
 /**
  * Created 卡你基巴 abc on 2015/11/6.
  */
 public abstract class BaseActivity extends AppCompatActivity{
-
     protected Toolbar mToolbar;
+    protected IWeatherView mWeaher;
     protected TextView mBarTitle;
+    protected LinearLayout mMusicTop;
+    protected IEditText mIEdit;
+    protected IView mIView;
+    protected ICancelButton mIButton;
+    protected ImageButton mFavoritesBtn;
+
+    protected Menu mMenu;
     protected LoadingViewHelperController mLoadingViewHelperController;
 
     @Override
@@ -35,15 +48,27 @@ public abstract class BaseActivity extends AppCompatActivity{
         initViewsAndEvents();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        onActivityDestroy();
+    }
+
     public void setContentView(int layoutResID){
         super.setContentView(layoutResID);
         mToolbar = (Toolbar) this.findViewById(R.id.toolbar);
         mBarTitle = (TextView) this.findViewById(R.id.bar_title);
+        mWeaher = (IWeatherView) this.findViewById(R.id.bar_weather);
+        mMusicTop = (LinearLayout) this.findViewById(R.id.music_top);
+        mIEdit = (IEditText) this.findViewById(R.id.i_edit);
+        mIView = (IView) this.findViewById(R.id.i_view);
+        mIButton = (ICancelButton) this.findViewById(R.id.cancel);
+        mFavoritesBtn = (ImageButton) this.findViewById(R.id.btn);
         if(null != mToolbar){
             setSupportActionBar(mToolbar);
-            getSupportActionBar().setHomeAsUpIndicator(R.mipmap.ic_weather);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             getSupportActionBar().setDisplayShowTitleEnabled(false);
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             if(null != getTitleName()){
                 mBarTitle.setText(getTitleName());
             }
@@ -55,6 +80,7 @@ public abstract class BaseActivity extends AppCompatActivity{
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        mMenu = menu;;
         if(0 != getMenuViewLayoutID()){
             setMenuView(menu,getMenuViewLayoutID());
         }
@@ -63,6 +89,56 @@ public abstract class BaseActivity extends AppCompatActivity{
 
     private void setMenuView(Menu menu, int menuResID) {
         getMenuInflater().inflate(menuResID,menu);
+    }
+
+    protected void toggleToolBar(boolean value){
+        if(value){
+            mBarTitle.setVisibility(View.GONE);
+            mWeaher.setVisibility(View.GONE);
+            mMusicTop.setVisibility(View.VISIBLE);
+            mMenu.findItem(R.id.action_robot).setVisible(false);
+            resetBar();
+        }else{
+            mBarTitle.setVisibility(View.VISIBLE);
+            mWeaher.setVisibility(View.VISIBLE);
+            mMusicTop.setVisibility(View.GONE);
+            mMenu.findItem(R.id.action_robot).setVisible(true);
+        }
+    }
+
+    protected void toggleWeaher(boolean value){
+        if(value){
+            mWeaher.setVisibility(View.VISIBLE);
+        }else{
+            mWeaher.setVisibility(View.GONE);
+        }
+    }
+
+    private void resetBar(){
+        mIEdit.setListener(new IEditText.OnListener(){
+            public void hasFocus(boolean hasFocus) {
+                if(hasFocus) {
+                    mFavoritesBtn.setVisibility(View.GONE);
+                    mIView.setVisibility(View.GONE);
+                    mIButton.setVisibility(View.VISIBLE);
+                }
+            }
+            public void onStop() {
+
+            }
+        });
+        mIButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view) {
+                mFavoritesBtn.setVisibility(View.VISIBLE);
+                mIView.setVisibility(View.VISIBLE);
+                mIButton.setVisibility(View.GONE);
+                mIEdit.clearFocus();
+            }
+        });
+    };
+
+    public void setTitleName(String name){
+        mBarTitle.setText(name);
     }
 
     public void readyGo(Class<?> clazz){
@@ -223,5 +299,6 @@ public abstract class BaseActivity extends AppCompatActivity{
     protected abstract View getLoadingTargetView();
     protected abstract String getTitleName();
     protected abstract void initViewsAndEvents();
+    protected abstract void onActivityDestroy();
 }
 

@@ -53,6 +53,7 @@ public class NewsDetailActivity extends BaseActivity implements NewsDetailView{
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
         }
+        toggleWeaher(false);
 
         String url = getIntent().getExtras().getString("url");
         webContent = (WebView) this.findViewById(R.id.web_container);
@@ -85,6 +86,11 @@ public class NewsDetailActivity extends BaseActivity implements NewsDetailView{
                 pbLoading.setProgerss(newProgress);
             }
         });
+    }
+
+    @Override
+    protected void onActivityDestroy() {
+
     }
 
     @Override

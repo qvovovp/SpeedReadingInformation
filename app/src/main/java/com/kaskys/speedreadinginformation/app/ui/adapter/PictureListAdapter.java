@@ -1,22 +1,14 @@
 package com.kaskys.speedreadinginformation.app.ui.adapter;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.TextView;
 import com.kaskys.speedreadinginformation.app.R;
 import com.kaskys.speedreadinginformation.app.bean.PictureData.Body.Detail;
 import com.kaskys.speedreadinginformation.app.ui.widget.MyImageView;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
-import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
-import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
-import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 /**

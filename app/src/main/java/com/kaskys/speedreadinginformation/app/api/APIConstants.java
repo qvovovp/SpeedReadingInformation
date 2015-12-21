@@ -28,6 +28,10 @@ public class APIConstants {
 
         //QQ音乐排行
         public static final String MUSIC_QQ_TOP_URL = "http://route.showapi.com/213-4";
+
+        //百度音乐排行榜
+        public static final String MUSIC_BAIDU_TOP_URL = "http://tingapi.ting.baidu.com/v1/restserver/ting?from=qianqian&version=2.1.0&method=baidu.ting.billboard.billList&format=json";
+
         //QQ音乐ID查询
         public static final String MUSIC_QQ_ID_DATA_URL = "http://route.showapi.com/213-2";
         //QQ音乐歌名人名查询

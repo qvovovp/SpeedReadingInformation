@@ -1,13 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-    <TextView
-            android:id="@+id/music_container"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textColor="@android:color/holo_red_light"
-            android:textSize="26sp"
-            android:text="This is MusicFragment Pager"/>
+        <GridView
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="3"/>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/grid">
+                <com.kaskys.speedreadinginformation.app.ui.widget.circle.IRotateCircle
+                        android:id="@+id/rotate_circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"/>
+                <com.kaskys.speedreadinginformation.app.ui.widget.circle.RoundImageView
+                        android:id="@+id/round_img"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/ic_splash"
+                        app:border_width="5dp"
+                        app:border_color="#ffff0000"
+                        app:point_width="10dp"
+                        app:point_color="#ff0000ff"/>
+                <ImageButton
+                        android:id="@+id/music_pre"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        android:src="@mipmap/ic_music_pre"/>
+                <com.kaskys.speedreadinginformation.app.ui.widget.IPlayButton
+                        android:id="@+id/music_play_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"/>
+                <ImageButton
+                        android:id="@+id/music_next"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        android:src="@mipmap/ic_music_next"/>
+        </RelativeLayout>
 </RelativeLayout>

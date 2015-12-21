@@ -1,4 +1,11 @@
 <resources>
+    <string name="item_news">news</string>
+    <string name="item_picture">picture</string>
+    <string name="item_music">music</string>
+    <string name="item_read">read</string>
+
+    <string name="music_seach_title_name">RankingList</string>
+
     <string name="app_name">SpeedReadingInformation</string>
     <string name="hello_world">Hello world!</string>
 
